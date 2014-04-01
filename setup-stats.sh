@@ -2,8 +2,8 @@
 
 # Configure your collectd server here
 
-COLLECTD_SERVER="10.11.10.20"
-PORT="54321"
+COLLECTD_SERVER="10.11.10.66"
+PORT="25826"
 
 . /lib/functions.sh
 . /lib/functions/network.sh

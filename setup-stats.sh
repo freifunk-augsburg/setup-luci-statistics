@@ -21,8 +21,8 @@ if [ -n "$COLLECTD_SERVER" ] && [ -n "$PORT" ]; then
 		set luci_statistics.collectd_network.Forward=0
 		set luci_statistics.collectd_network.enable=1
 		set luci_statistics.ffa1=collectd_network_server
-		set luci_statistics.ffa1.host=10.11.10.20
-		set luci_statistics.ffa1.port=54321
+		set luci_statistics.ffa1.host=$COLLECTD_SERVER
+		set luci_statistics.ffa1.port=$PORT
 	EOF
 fi
 

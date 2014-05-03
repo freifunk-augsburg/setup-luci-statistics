@@ -2,7 +2,7 @@
 
 # Configure your collectd server here
 
-COLLECTD_SERVER="10.11.10.66"
+COLLECTD_SERVER="10.11.63.125"
 PORT="25826"
 
 . /lib/functions.sh

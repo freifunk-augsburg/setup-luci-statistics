@@ -86,6 +86,16 @@ config_foreach handle_interface interface
 
 uci commit luci_statistics
 
+# enable watchdog for collectd
+uci batch <<- EOF
+	set freifunk-watchdog.collectd=process
+	set freifunk-watchdog.collectd.process=collectd
+	set freifunk-watchdog.collectd.initscript=/etc/init.d/collectd
+	commit freifunk-watchdog
+EOF
+
 /etc/init.d/collectd enable &> /dev/null
 /etc/init.d/luci_statistics enable &> /dev/null
 /etc/init.d/luci_statistics restart &> /dev/null
+/etc/init.d/freifunk-watchdog restart &> /dev/null
+
